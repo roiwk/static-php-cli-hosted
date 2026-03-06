@@ -30,11 +30,11 @@ jobs:
         run: |
           switch ("${{ matrix.combination }}") {
             "spc-min" {
-                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=ctype,ev,fileinfo,filter,iconv,mbstring,tokenizer,openssl,phar,ssh2,zlib,xlswriter"
+                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=ctype,ev,fileinfo,filter,gd,iconv,mbstring,tokenizer,openssl,phar,ssh2,xlswriter,zip,zlib"
                 Add-Content -Path $env:GITHUB_OUTPUT -Value "DEPLOY_TARGET=${{ secrets.DEPLOY_SERVER_TARGET_WINDOWS_SPC_MIN }}"
             }
             "spc-max" {
-                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=amqp,apcu,bcmath,bz2,calendar,ctype,curl,dba,dom,ds,ev,exif,ffi,fileinfo,filter,ftp,gd,iconv,igbinary,libxml,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pdo,pdo_mysql,pdo_sqlite,pdo_sqlsrv,phar,rar,redis,ssh2,session,shmop,simdjson,simplexml,soap,sockets,sqlite3,sqlsrv,ssh2,sysvshm,tokenizer,xml,xmlreader,xmlwriter,yac,yaml,zip,zlib,xlswriter"
+                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=amqp,apcu,bcmath,bz2,calendar,ctype,curl,dba,dom,ds,ev,exif,ffi,fileinfo,filter,ftp,gd,iconv,igbinary,libxml,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pdo,pdo_mysql,pdo_sqlite,pdo_sqlsrv,phar,rar,redis,ssh2,session,shmop,simdjson,simplexml,soap,sockets,sqlite3,sqlsrv,ssh2,sysvshm,tokenizer,xml,xmlreader,xmlwriter,xlswriter,yac,yaml,zip,zlib"
                 Add-Content -Path $env:GITHUB_OUTPUT -Value "DEPLOY_TARGET=${{ secrets.DEPLOY_SERVER_TARGET_WINDOWS_SPC_MAX }}"
             }
           }  
