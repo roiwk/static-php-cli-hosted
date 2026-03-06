@@ -30,7 +30,7 @@ jobs:
         run: |
           switch ("${{ matrix.combination }}") {
             "spc-min" {
-                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=ctype,ev,fileinfo,filter,gd,iconv,mbstring,tokenizer,openssl,phar,ssh2,xlswriter,zip,zlib"
+                Add-Content -Path $env:GITHUB_OUTPUT -Value "EXTENSIONS=apcu,bz2,bcmath,ctype,ev,fileinfo,filter,gd,iconv,mbstring,tokenizer,openssl,phar,ssh2,xlswriter,zip,zlib"
                 Add-Content -Path $env:GITHUB_OUTPUT -Value "DEPLOY_TARGET=${{ secrets.DEPLOY_SERVER_TARGET_WINDOWS_SPC_MIN }}"
             }
             "spc-max" {
