@@ -14,14 +14,14 @@ jobs:
       matrix:
         php-version:
           # - "8.1"
-          - "8.2"
-          - "8.3"
+          # - "8.2"
+          # - "8.3"
           - "8.4"
-          - "8.5"
+          # - "8.5"
         runner:
           - "windows-latest"
         combination:
-          - spc-min
+          # - spc-min
           - spc-max
     
     steps:
