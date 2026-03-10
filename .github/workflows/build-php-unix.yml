@@ -190,6 +190,7 @@ jobs:
           source_dir: "dist/"
           destination_dir: static-php-cli/${{ matrix.combination }}/
           endpoint: ${{ secrets.AWS_ENDPOINT }}
+          region: ${{ secrets.AWS_REGION }}
 
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v4
